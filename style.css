@@ -28,6 +28,11 @@ h3 {
 
 /* #JUMBOTRON CSS */
 
+/* #home {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+} */
+
 .jumbotron {
   background: no-repeat center;
   background-image: url(./img/ryan-mcmanimie.jpg);
@@ -36,9 +41,9 @@ h3 {
   color: white;
   height: 100vh;
   border-bottom: #fc9867 4px solid;
-  -moz-box-shadow: inset 0 0 10px #000000;
+  /* -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000; */
 }
 
 /* ADD MEDIA QUERY TODO: */
@@ -57,7 +62,14 @@ h3 {
   box-shadow: none;
   width: 80%;
   height: auto;
+  max-width: 55%;
+  transition: max-width 0.5s;
+}
+
+#namelogo:hover {
+  width: 80%;
   max-width: 60%;
+  transition: max-width 0.5s;
 }
 
 /* #ABOUT CSS */
