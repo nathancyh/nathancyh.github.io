@@ -1,18 +1,18 @@
 "use strict";
-const getNavi = document.getElementById("navi");
+const nav = document.getElementById("navi");
 const btnSwit = document.getElementById("btnSwitch");
 
 let switcher = function () {
-  if (getNavi.classList.contains("navbar-dark")) {
-    getNavi.classList.remove("navbar-dark");
-    getNavi.classList.remove("bg-dark");
-    getNavi.classList.add("navbar-light");
-    getNavi.classList.add("bg-light");
+  if (nav.classList.contains("navbar-dark")) {
+    nav.classList.remove("navbar-dark");
+    nav.classList.remove("bg-dark");
+    nav.classList.add("navbar-light");
+    nav.classList.add("bg-light");
   } else {
-    getNavi.classList.remove("navbar-light");
-    getNavi.classList.remove("bg-light");
-    getNavi.classList.add("navbar-dark");
-    getNavi.classList.add("bg-dark");
+    nav.classList.remove("navbar-light");
+    nav.classList.remove("bg-light");
+    nav.classList.add("navbar-dark");
+    nav.classList.add("bg-dark");
   }
 };
 
@@ -20,7 +20,6 @@ btnSwit.addEventListener("click", switcher);
 
 //////////////////////////////
 // STICKY NAV
-const nav = document.getElementById("navi");
 const header = document.getElementById("home");
 const navHeight = nav.getBoundingClientRect().height;
 
