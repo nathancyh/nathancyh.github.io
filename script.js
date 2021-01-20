@@ -17,3 +17,28 @@ let switcher = function () {
 };
 
 btnSwit.addEventListener("click", switcher);
+
+//////////////////////////////
+// STICKY NAV
+const nav = document.getElementById("navi");
+const header = document.getElementById("home");
+const navHeight = nav.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) {
+    nav.classList.remove("sticky");
+  } else {
+    nav.classList.add("sticky");
+  }
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: "-65px",
+});
+
+headerObserver.observe(header);
