@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/19d5dd39c7.js" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
@@ -43,7 +45,6 @@
         </div>
       </nav>
     </header>
-      <!-- <div style="margin-top:33px;"></div> -->
         <div id="home" class="row container-fluid jumbotron text-center g-0">
           <div>
           <a href="https://github.com/nathancyh?tab=repositories" target="_blank">
@@ -55,66 +56,179 @@
           </div>
         </div>
       <section id="about">
-        <div class="container text-light text-center">
-          <div class="row p-5 gx-5 align-items-center justify-content-center">
-              <div class="col-md-6">
+        <div class="container-fluid text-light text-center browframe">
+        <img class="img-fluid" src="img/frame_chrome_mac_dark.png">
+        <div class="typewriter">
+          <h1>Hi. my name is Nathan. I design webpages..</h1>
+        </div>
+          <div class="container-fluid text-light text-center about-content  hidden">
+            <div class="p-5 align-items-center justify-content-center">
                 <h3  class="fw-bold">Hi. my name is Nathan. I design webpages. </h3>
-                <div class="lead"> 
+                <div> 
                   Born and raised in Hong Kong. I enjoy conveying my ideas visually, and creating webpages is a excellent way to get my messages across. I aim to make my design vibrant and colorful when creating webpages as a front-end developmer. <br><br> 
-                  Outside of Front-end web development,
-                  I have experience in digital  marketing for SMEs. 
+                  Apart from front-end web development, I have experience in digital marketing, where I create social media Ads campaigns and provide content for said campaigns utilizing video and graphic editng softwares. I am also responsible for optimizing existing sites for SEO and traffics.
                 </div>
               </div>
-            <!-- <div class="col-md-6"><img class="img-fluid mt-4" src="img/Victoria_Harbour.jpg"></div> -->
+            </div>
           </div>
       </div> 
-      </section>
-      <section class="container-fluid bg-light text-center" id="skills">
+      <section class="container-fluid text-center skills bg-info">
+        <div class="skills__tab-container">
+          <button
+            class="btn skills__tab skills__tab--1 skills__tab--active"
+            data-tab="1"
+          >
+            Front-end Development
+          </button>
+          <button class="btn skills__tab skills__tab--2" data-tab="2">
+            Digital Marketing
+          </button>
+        </div>
+        <div
+        class="skills__content skills__content--1 skills__content--active">
+        <div class="container-fluid lead"> 
+          <div class="row skillrow1">
+            <div class="col-md-6">
+              <img class="img-fluid mb-4 tab_img" src="img/tab-1.png">
+          <p>
+            Languages I use: 
+          </p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Sass</li>
+            <li>Javascript</li>
+          </ul>
+        </div>
+          <div class="col-md-6">
+            <img class="img-fluid mb-4 tab_img" src="img/tab-2.png">
+            <p>
+            Dev Tools:
+          </p>
+          <ul>
+            <li>Visual Studio Code</li>
+            <li>Bootstrap</li>
+            <li>Bulma</li>
+            <li>Codepen</li>
+            <li>Github</li>
+          </ul>
+        </div>
+        </div>
+        </div> 
+      </div>
+      <div class="skills__content skills__content--2">
+        <div class="container-fluid lead"> 
+          <div class="row">
+            <div class="col-md-6">
+              <img class="img-fluid mb-4 tab_img" src="img/tab-3.png">
+          <p>
+            What I create:
+          </p>
+          <ul>
+            <li>Sales funnels</li>
+            <li>Video Editing</li>
+            <li>2D Graphics/ Logos</li>
+            <li>Facebook Ads</li>
+            <li>Google Ads</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img class="img-fluid mb-4 tab_img" src="img/tab-4.png">
+          <p>
+            Design Tools:
+          </p>
+          <ul>
+            <li>Adobe Premiere Pro</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Audition</li>
+            <li>Wordpress/ Elementor</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+        <!--
         <div class="row justify-content-center">
           <div class="col-md-4 text-white">
             <h1>MY SKILLS</h1>
-            <!-- <img class="img-fluid mt-5 mb-4" style="width: 50vw;" src="img/html.png"> -->
+             <img class="img-fluid mt-5 mb-4" style="width: 50vw;" src="img/html.png">
           </div>
         </div>
         <div class="row text-center justify-content-center text-light">
           <div class="col-4 bg-primary skilldiv m-4">
-          <h3 class="fw-bold m-3">Web Development</h3>
-          <!-- <img class="img-fluid mt-5 mb-4" src="img/html.png"> -->
+          <h3 class="fw-bold m-3">Front-end  Development</h3>
+          <!-- <img class="img-fluid mt-5 mb-4" src="img/html.png">
             <div class="lead p-3"> 
-              I believe in lifelong learning, joining this bootcamp is a great way to help me jumpstart a new career and to equip myself with new skill and a relatively short period of time.
+              <p>
+                Languages I use: 
+              </p>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Sass</li>
+                <li>Javascript</li>
+              </ul>
+              <p>
+                Dev Tools:
+              </p>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>Bootstrap</li>
+                <li>Bulma</li>
+                <li>Codepen</li>
+                <li>Github</li>
+              </ul>
             </div> 
           </div>
           <div class="col-4 bg-secondary skilldiv m-4">
-            <h3 class="fw-bold m-3">Online Marketing</h3>
+            <h3 class="fw-bold m-3">Digital Marketing</h3>
             <div class="lead p-3"> 
-              I believe in lifelong learning, joining this bootcamp is a great way to help me jumpstart a new career and to equip myself with new skill and a relatively short period of time.
+              <p>
+                What I can make
+              </p>
+              <ul>
+                <li>Sales funnels</li>
+                <li>Facebook Ads</li>
+                <li>Google Ads</li>
+                <li>Video Editing</li>
+                <li>2D Graphics/ Logos</li>
+              </ul>
+              <p>
+                Design Tools:
+              </p>
+              <ul>
+                <li>Adobe Premiere Pro</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe Audition</li>
+                <li>Wordpress/ Elementor</li>
+              </ul>
             </div> 
           </div>
         </div>
+      -->
       </section>
-      <section class="pb-4" id="work">
-        <div class="container-fluid">
-          <div class="row pt-4 px-4 text-center">
-            <div class="col-md mt-4 gx-5">
-              <img class="hobimg" src="img/lion-rock.jpg">
-              <h3 class="hobtitle fw-bolder text-info">Hiking</h3>
-              <p class="hobtext mt-4 lh-base text-light">
-                I enjoy hiking, mostly I go to Victoria Peak and Lion Rock, the climb to Victoria Peak is beginner-friendly and the view is fantastic. I am always amazed by how these great nature environments are so close to the city. 
-              </p>
+    </section>
+      <section id="work">
+        <div class="container-fluid work_box">
+          <div class="row px-4 text-center">
+            <div class="col-md-4 sample_box">
+              <img class="img-fluid mb-4" src="img/samplework/sample1.jpg">
             </div>
-            <div class="col-md mt-4 gx-5">
-              <img class="hobimg" src="img/Interstellar_film_poster.jpg">
-              <h3 class="hobtitle fw-bolder text-info">Movies</h3>
-              <p class="hobtext mt-4 lh-base text-light">
-                For indoor activities, I enjoy watching movies with friends and family in the evening. Sci-fi is my favourite genre. Interstellar and Blade Runner are two of my favourite movies.    
-              </p>
+            <div class="col-md-4 sample_box">
+              <img class="img-fluid mb-4" src="img/samplework/sample2.png">
             </div>
-            <div class="col-md mt-4 gx-5">
-              <img class="hobimg" src="img/witcher.jpg">
-              <h3 class="hobtitle fw-bolder text-info">Gaming</h3>
-              <p class="hobtext mt-4 lh-base text-light">
-                Gaming is another of my frquent indoor activities. I enjoy single-player titles with great storyline, such as Witcher 3 and the Mass Effect trilogy.    
-              </p>
+            <div class="col-md-4 sample_box">
+              <img class="img-fluid mb-4" src="img/samplework/sample3.jpg">
+            </div>
+          </div>
+          <div class="row px-4 text-center">
+            <div class="col-md-4 sample_box">
+              <img class="img-fluid mb-4" src="img/samplework/sample4.gif">
+            </div>
+            <div class="col-md-4 sample_box">
+              <img class="img-fluid mb-4" src="img/samplework/sample5.gif">
+            </div>
+            <div class="col-md-4 sample_box">
+              <img class="img-fluid mb-4" src="img/samplework/sample6.png">
             </div>
           </div>
         </div>
@@ -155,7 +269,5 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <!-- ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
   </body>
 </html>
