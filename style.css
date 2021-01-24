@@ -265,7 +265,7 @@ h3 {
   display: flex;
   justify-content: center;
   margin: 0px 11% 0px 11%;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
   box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
   position: relative;
   bottom: 130px;
@@ -275,7 +275,7 @@ h3 {
   display: none;
   background-color: white;
   margin: 0px 11% 0px 11%;
-  border-radius: 0px 0px 40px 40px;
+  border-radius: 0px 0px 20px 20px;
   /* JUST PRESENTATIONAL */
   font-size: 1.7rem;
   /* padding: 2.5rem 7rem 6.5rem 7rem; */
