@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="style.css" />
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Ubuntu&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
     </style>
     <title>Nathan Chan Personal Profolio</title>
   </head>
@@ -37,10 +38,10 @@
 
         <!-- <a class="navbar-brand mx-3" href=#">Nathan Chan - My Profolio</a> -->
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#work">Recent Work</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Recent Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         </div>
       </nav>
@@ -85,7 +86,7 @@
         </div>
         <div
         class="skills__content skills__content--1 skills__content--active">
-        <div class="container-fluid lead"> 
+        <div class="container-fluid"> 
           <div class="row skillrow1">
             <div class="col-md-6">
               <img class="img-fluid tab_img" src="img/tab-1.png">
@@ -116,7 +117,7 @@
         </div> 
       </div>
       <div class="skills__content skills__content--2">
-        <div class="container-fluid lead"> 
+        <div class="container-fluid"> 
           <div class="row">
             <div class="col-md-6">
               <img class="img-fluid tab_img" src="img/tab-3.png">
@@ -152,25 +153,25 @@
           <div class="row text-center">
             <div class="col-lg-4 col-md-6 sample_box">
               <fig>
-                <img class="img-fluid" src="img/samplework/sample6.png">
+                <img class="img-fluid" src="img/samplework/sample1.jpg">
                 <div class="overlay">
-                  <div class="caption">Hello World</div>
+                  <div class="caption">THIS <br>is Sample01</div>
                 </div>
               </fig>
             </div>
             <div class="col-lg-4 col-md-6 sample_box">
               <fig>
-                <img class="img-fluid" src="img/samplework/sample5.gif">
+                <img class="img-fluid" src="img/samplework/sample2.gif">
                 <div class="overlay">
-                  <div class="caption">Hello World</div>
+                  <div class="caption">THIS <br>is Sample02</div>
                 </div>
               </fig>
             </div>
             <div class="col-lg-4 col-md-12 sample_box">
               <fig>
-              <img class="img-fluid" src="img/samplework/sample4.gif">
+              <img class="img-fluid" src="img/samplework/sample3.jpg">
               <div class="overlay">
-                <div class="caption">Hello World</div>
+                <div class="caption">THIS <br>is Sample03</div>
               </div>
             </fig>
             </div>
@@ -180,7 +181,7 @@
                 <fig>
                 <img class="img-fluid" src="img/samplework/sample4.jpg">
                 <div class="overlay">
-                  <div class="caption">Hello World</div>
+                  <div class="caption">THIS <br>is Sample04</div>
                 </div>
               </fig>
               </div>
@@ -188,7 +189,7 @@
               <fig>
               <img class="img-fluid" src="img/samplework/sample5.gif">
               <div class="overlay">
-                <div class="caption">Hello World</div>
+                <div class="caption">THIS <br>is Sample05</div>
               </div>
               </fig>
             </div>
@@ -196,7 +197,7 @@
               <fig>
                 <img class="img-fluid" src="img/samplework/sample6.png">
                 <div class="overlay">
-                  <div class="caption">Hello World</div>
+                  <div class="caption">THIS <br>is Sample06</div>
               </div>
             </fig>
             </div>
@@ -206,11 +207,10 @@
       <section class="container-fluid bg-dark text-center" id="contact">
         <div class="row">
           <div class="col">
-            <h2>Contact Me:</h2>
           </div>
         </div>
         <div style="padding: 5px 0px;"></div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-sm-3 mx-auto">
             <span class="fa-stack fa-3x">
               <i class="fab fa-discord"></i>
@@ -225,11 +225,12 @@
               <p class="lead">Email: brnathan2020@gmail.com</p>
             </a>
           </div>
-        </div>
+        </div> -->
         <form
   action="https://formspree.io/f/xbjpwgbd"
   method="POST"
 >
+<h2>Contact Me:</h2>
   <label>
     Name:
     <input type="text" name="name">
@@ -245,9 +246,9 @@
   <button class="btn" type="submit">Send</button>
 </form>
       </section>
-      <section class="text-center bg-dark">
+      <!-- <section class="text-center bg-dark">
         <button type="button" class="btn btn-success my-3 " id="btnSwitch">Navbar Color Switcher</button>
-      </section>
+      </section> -->
     <!--Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
