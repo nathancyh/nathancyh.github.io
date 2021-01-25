@@ -2,7 +2,7 @@
 const nav = document.getElementById("navi");
 const btnSwit = document.getElementById("btnSwitch");
 /////////////////////////////SCROLL REVEAL
-ScrollReveal().reveal(".about", { delay: 250 });
+ScrollReveal().reveal(".about");
 ScrollReveal().reveal(".skillrow1", { delay: 250 });
 ScrollReveal().reveal(".work_box", { delay: 250 });
 ScrollReveal().reveal("#contact", { delay: 200 });
