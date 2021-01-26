@@ -19,6 +19,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&family=Ubuntu&display=swap');
@@ -48,6 +49,7 @@
     </header>
         <div id="home" class="row container-fluid jumbotron text-center g-0">
           <div>
+            <img src="img/arrowtext.png" id="arrowtext">
           <a href="https://github.com/nathancyh?tab=repositories" target="_blank">
             <img src="img/foxnebula.jpg" id="circle">
           </a>
@@ -57,7 +59,7 @@
           </div>
         </div>
       <section id="about">
-        <div class="container-fluid text-light text-center browframe">
+        <div class="container-fluid text-light text-center browframe" data-aos="fade-in">
           <div class="typewriter">
             <h1>Hi. my name is Nathan. I design webpages..</h1>
           </div>
@@ -72,7 +74,7 @@
             </div>
           </div>
       </div> 
-      <section class="container-fluid text-center skills bg-info">
+      <div class="container-fluid text-center skills" data-aos="fade-up">
         <div class="skills__tab-container">
           <button
             class="btn skills__tab skills__tab--1 skills__tab--active"
@@ -88,7 +90,7 @@
         class="skills__content skills__content--1 skills__content--active">
         <div class="container-fluid"> 
           <div class="row skillrow1">
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="flip-up">
               <img class="img-fluid tab_img" src="img/tab-1.png">
           <p>
             Languages I use: 
@@ -100,7 +102,7 @@
             <li>Javascript</li>
           </ul>
         </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="flip-up">
             <img class="img-fluid tab_img" src="img/tab-2.png">
             <p>
             Dev Tools:
@@ -146,12 +148,13 @@
         </div>
         </div>
       </div>
-      </section>
+    </div>
     </section>
+    <div id="curtain">
       <section id="work">
         <div class="container-fluid work_box">
           <div class="row text-center">
-            <div class="col-lg-4 col-md-6 sample_box">
+            <div class="col-lg-4 col-md-6 sample_box" data-aos="fade-up-left">
               <fig>
                 <img class="img-fluid" src="img/samplework/sample1.jpg">
                 <div class="overlay">
@@ -159,7 +162,7 @@
                 </div>
               </fig>
             </div>
-            <div class="col-lg-4 col-md-6 sample_box">
+            <div class="col-lg-4 col-md-6 sample_box" data-aos="fade-up">
               <fig>
                 <img class="img-fluid" src="img/samplework/sample2.gif">
                 <div class="overlay">
@@ -167,7 +170,7 @@
                 </div>
               </fig>
             </div>
-            <div class="col-lg-4 col-md-12 sample_box">
+            <div class="col-lg-4 col-md-12 sample_box" data-aos="fade-up-right">
               <fig>
               <img class="img-fluid" src="img/samplework/sample3.jpg">
               <div class="overlay">
@@ -177,7 +180,7 @@
             </div>
           </div>
           <div class="row text-center">
-              <div class="col-lg-4 col-md-6 sample_box">
+              <div class="col-lg-4 col-md-6 sample_box" data-aos="fade-left">
                 <fig>
                 <img class="img-fluid" src="img/samplework/sample4.jpg">
                 <div class="overlay">
@@ -193,7 +196,7 @@
               </div>
               </fig>
             </div>
-            <div class="col-lg-4 col-md-12 sample_box">
+            <div class="col-lg-4 col-md-12 sample_box" data-aos="fade-right">
               <fig>
                 <img class="img-fluid" src="img/samplework/sample6.png">
                 <div class="overlay">
@@ -204,20 +207,19 @@
           </div>
         </div>
       </section> 
-      <section class="container-fluid bg-dark text-center" id="contact">
-        <div class="row">
-          <div class="col">
-          </div>
-        </div>
-        <div style="padding: 5px 0px;"></div>
+      <!-- <div class="modal-pos"> -->
+      <section class="container-fluid text-center" id="contact">
+        <button class="btn show-modal">Contact Me</button>
+        <div class="text-center" id=sig>
+          <h4 class="mb-5">2020 Handcrafted by Nathan Chan</h4></div>
         <!-- <div class="row">
-          <div class="col-sm-3 mx-auto">
+          <div class="col-sm-6 mx-auto">
             <span class="fa-stack fa-3x">
               <i class="fab fa-discord"></i>
             </span>
-            <p class="lead">Discord:<br>uda#2567</p>
+            <p class="lead">Discord: uda#2567</p>
           </div>
-          <div class="col-sm-3 mx-auto">
+          <div class="col-sm-6 mx-auto">
             <span class="fa-stack fa-3x">
               <i class="far fa-envelope"></i>
             </span>
@@ -226,8 +228,8 @@
             </a>
           </div>
         </div> -->
-        <form
-  action="https://formspree.io/f/xbjpwgbd"
+        <!-- <form
+  action="https://formspree.io/f/xbjpwgbd" id="form-smol"
   method="POST"
 >
 <h2>Contact Me:</h2>
@@ -244,12 +246,42 @@
     <textarea name="message"></textarea>
   </label>
   <button class="btn" type="submit">Send</button>
-</form>
+</form> -->
       </section>
+      <div class="modal hiddenM">
+        <button class="close-modal">&times;</button>
+       <form
+        action="https://formspree.io/f/xbjpwgbd"
+         method="POST" target="_blank"
+    >
+    <h2>Contact Me😍</h2>
+    <label>
+    Name:
+    <input type="text" name="name">
+    </label>
+    <label>
+    Email:
+    <input type="text" name="_replyto" required>
+    </label>
+    <label>
+    Message:
+    <textarea name="message"></textarea>
+    </label>
+    <button class="btn" type="submit">Send</button>
+    </form>
+      </div>
+      <div class="overlayM hiddenM"></div>
+
+    </div>
+
       <!-- <section class="text-center bg-dark">
         <button type="button" class="btn btn-success my-3 " id="btnSwitch">Navbar Color Switcher</button>
       </section> -->
     <!--Bootstrap Bundle with Popper -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

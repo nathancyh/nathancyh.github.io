@@ -1,12 +1,7 @@
 "use strict";
 const nav = document.getElementById("navi");
-const btnSwit = document.getElementById("btnSwitch");
-/////////////////////////////SCROLL REVEAL
-ScrollReveal().reveal(".about");
-ScrollReveal().reveal(".skillrow1", { delay: 250 });
-ScrollReveal().reveal(".work_box", { delay: 250 });
-ScrollReveal().reveal("#contact", { delay: 200 });
 //////////////////////////////NAV SWITCHER
+//const btnSwit = document.getElementById("btnSwitch");
 // let switcher = function () {
 //   if (nav.classList.contains("navbar-dark")) {
 //     nav.classList.remove("navbar-dark");
@@ -30,9 +25,9 @@ const stickyNav = function (entries) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) {
-    nav.classList.remove("hidden");
+    $(nav).fadeIn(220);
   } else {
-    nav.classList.add("hidden");
+    $(nav).fadeOut(220);
   }
 };
 
@@ -78,4 +73,38 @@ tabsContainer.addEventListener("click", function (e) {
   document
     .querySelector(`.skills__content--${clicked.dataset.tab}`)
     .classList.add("skills__content--active");
+});
+
+//////////////////////MODAL
+("use strict");
+
+const modal = document.querySelector(".modal");
+const overlayM = document.querySelector(".overlayM");
+const btnCloseModal = document.querySelector(".close-modal");
+const btnsOpenModal = document.querySelector(".show-modal");
+
+const openModal = function () {
+  console.log("OPEN MODAL");
+  $(modal).fadeIn();
+  $(overlayM).fadeIn();
+  $(nav).fadeOut();
+};
+
+const closeModal = function () {
+  console.log("CLOSE MODAL");
+  $(modal).fadeOut();
+  $(overlayM).fadeOut();
+  $(nav).fadeIn();
+};
+
+btnsOpenModal.addEventListener("click", openModal);
+btnCloseModal.addEventListener("click", closeModal);
+overlayM.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  // console.log(e.key);
+
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
 });

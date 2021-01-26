@@ -14,7 +14,6 @@ html {
 }
 
 body {
-  /* font-family: "Ubuntu", sans-serif; */
   line-height: 1.5;
   position: relative;
 }
@@ -31,15 +30,24 @@ h3 {
   line-height: 175%;
 }
 
-/* TODO: */
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
 }
 
+section::before {
+  display: block;
+  content: "";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  position: relative;
+}
+
 /* #NAV #JUMBOTRON */
 .navbar {
   border-bottom: var(--color-orange) 4px solid;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .hidden {
@@ -56,8 +64,33 @@ h3 {
   border-bottom: var(--color-orange) 4px solid;
 }
 
+#arrowtext {
+  width: 23%;
+  position: absolute;
+  top: 2.5%;
+  left: 15%;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1199px) {
+  #arrowtext {
+    opacity: 0;
+  }
+}
+
 .jumbotron img {
-  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: auto;
   max-width: 40vw;
@@ -70,6 +103,7 @@ h3 {
   background-image: url(/img/foxnebula.jpg);
   background-size: contain;
   margin-top: 85px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 992px) {
@@ -105,10 +139,12 @@ h3 {
 }
 
 /* #ABOUT */
-/* TODO: HIDE RESPONSIVE */
 #about {
-  background-color: var(--color-orange);
   padding-top: 180px;
+  font-family: "consolas", sans-serif;
+  background: linear-gradient(-45deg, #f7745d, #66bae0, #e6e360, #29b389);
+  background-size: 500% 500%;
+  animation: gradient 15s ease infinite;
 }
 
 #about img {
@@ -116,9 +152,8 @@ h3 {
 }
 
 .browframe img {
-  /* box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
-   */
   border-radius: 20px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 1200px) {
@@ -128,7 +163,7 @@ h3 {
     padding-right: 20%;
     font-size: 1.5rem;
     position: absolute;
-    top: 29%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -169,15 +204,9 @@ h3 {
 
   .about-inner {
     padding: 80px 0px 80px 0px;
-
-    /* position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
   }
 }
-
-/* TODO: SCROLL REVEAL */
+/* TODO: ADJUST */
 .typewriter h1 {
   color: #fff;
   font-family: monospace;
@@ -190,12 +219,11 @@ h3 {
   letter-spacing: 0.1em;
   animation: typing 4s steps(30, end), blink-caret 0.5s step-end;
   position: absolute;
-  top: 29%;
+  top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* The typing effect */
 @keyframes typing {
   from {
     width: 0;
@@ -220,6 +248,21 @@ h3 {
   border-bottom: 4px solid var(--color-orange);
   color: rgb(36, 36, 36);
   padding-bottom: 230px;
+  background: linear-gradient(-45deg, #ee7752, #d36891, #76c5e2, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .skills p {
@@ -334,11 +377,16 @@ h3 {
 }
 
 /* #WORK */
-#work {
-  border-bottom: 4px solid var(--color-orange);
-  color: rgb(36, 36, 36);
+
+#curtain {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("img/curtain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#work {
+  color: rgb(36, 36, 36);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -358,6 +406,7 @@ h3 {
   position: relative;
   bottom: 320px;
   border-radius: 12px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .sample_box {
@@ -368,7 +417,6 @@ h3 {
   padding-right: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 0.75rem;
-  /* border-radius: 12px; */
 }
 
 .sample_box * {
@@ -381,8 +429,6 @@ h3 {
   opacity: 1;
   width: 100%;
   height: auto;
-  /* -webkit-transform: translate(0%, -50%);
-  transform: translate(0%, -50%); */
 }
 
 .sample_box:hover img {
@@ -417,14 +463,11 @@ h3 {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-/* #Contact */
+/* #Contact Me */
 
 #contact {
   color: white;
   padding: 50px 100px 10px 100px;
-  background: linear-gradient(-45deg, #ee7752, #cc85a0, #76c5e2, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -448,15 +491,16 @@ form {
   border-radius: 15px;
   font-size: 22px;
   text-align: left;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.3);
+  font-family: "Josefin Sans", sans-serif;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 780px) {
   #contact {
     padding: 30px 5% 30px 5%;
   }
 
   form {
-    /* padding: 30px 0px 30px 0px; */
     margin: 30px 0px 30px 0px;
   }
 }
@@ -482,4 +526,73 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 8px;
   resize: vertical;
+}
+
+/* CONTACT MODAL */
+
+.show-modal {
+  position: absolute;
+  left: 50%;
+  bottom: 190px;
+  transform: translate(-50%, -50%);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+  z-index: 999;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  background-color: #6fb6f0;
+  border-radius: 15px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  max-height: 85vh;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .modal {
+    width: 70%;
+  }
+}
+
+.modal form {
+  background-color: #6fb6f0;
+  padding: 30px 5% 30px 5%;
+  margin: 0px 0% 0px 0%;
+  transform: scale(0.9);
+  box-shadow: none;
+}
+
+.overlayM {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.hiddenM {
+  display: none;
+}
+
+.modal-pos {
+  position: relative;
 }
