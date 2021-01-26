@@ -76,8 +76,6 @@ tabsContainer.addEventListener("click", function (e) {
 });
 
 //////////////////////MODAL
-("use strict");
-
 const modal = document.querySelector(".modal");
 const overlayM = document.querySelector(".overlayM");
 const btnCloseModal = document.querySelector(".close-modal");
@@ -107,4 +105,15 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
+});
+
+///////////////////////////NAV ADJEUSTMENT
+$(".nav-link").click(function () {
+  var divId = $(this).attr("href");
+  $("html, body").animate(
+    {
+      scrollTop: $(divId).offset().top - 240,
+    },
+    100
+  );
 });

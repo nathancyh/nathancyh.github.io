@@ -1,6 +1,6 @@
 # Overview
 
-A responsive about me page using bootstrap 5 and Awesome Font. Consist of 5 sections.
+A responsive Portfolio page mainly using Bootstrap 5 & JQuery.
 
 - Splash
 - Home
