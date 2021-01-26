@@ -50,6 +50,10 @@ section::before {
   font-family: "Josefin Sans", sans-serif;
 }
 
+.nav-link {
+  font-size: 1.3rem;
+}
+
 .hidden {
   opacity: 0;
 }
@@ -142,6 +146,7 @@ section::before {
 #about {
   padding-top: 180px;
   font-family: "consolas", sans-serif;
+  font-weight: 600;
   background: linear-gradient(-45deg, #f7745d, #66bae0, #e6e360, #29b389);
   background-size: 500% 500%;
   animation: gradient 15s ease infinite;
