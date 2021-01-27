@@ -156,7 +156,7 @@ section::before {
   letter-spacing: 0.1em;
   animation: typing 4s steps(30, end), blink-caret 0.5s step-end;
   position: absolute;
-  top: 33%;
+  top: 34%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -217,6 +217,10 @@ section::before {
     background-repeat: no-repeat;
     background-position: center top;
     min-height: 700px;
+  }
+  /* TODO: ADJUST  */
+  .about-inner {
+    padding-top: 130px;
   }
 }
 
